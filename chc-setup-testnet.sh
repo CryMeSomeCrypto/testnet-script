@@ -42,7 +42,7 @@ if [[ $DOSETUP =~ "y" ]] ; then
   ./autogen.sh
   sudo ./contrib/install_db4.sh berkeley48
   export BDB_PREFIX='/db4'
-  ./configure CPPFLAGS="-I${BDB_PREFIX}/include/ -O2 -fPIC" LDFLAGS="-L${BDB_PREFIX}/lib/" ./configure CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --disable-zmq --disable-tests --enable-debug
+  ./configure CPPFLAGS="-I${BDB_PREFIX}/include/ -O2 -fPIC" LDFLAGS="-L${BDB_PREFIX}/lib/" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --disable-zmq --disable-tests --enable-debug
   sudo make
 
 
